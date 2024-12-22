@@ -51,19 +51,13 @@
     </style>
     <script>
         window.onload = function() {
-            fetch('password.txt')
-                .then(response => response.text())
-                .then(password => {
-                    var userPassword = prompt("Please enter the password:");
-                    if (userPassword === password.trim()) {
-                        document.getElementById('main-content').style.display = 'block'; // Show the main content
-                    } else {
-                        document.getElementById('error-message').style.display = 'block'; // Show the error message
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching the password:', error);
-                });
+            var correctPassword = "111122"; // Hard-coded password
+            var userPassword = prompt("Please enter the password:");
+            if (userPassword === correctPassword) {
+                document.getElementById('main-content').style.display = 'block'; // Show the main content
+            } else {
+                document.getElementById('error-message').style.display = 'block'; // Show the error message
+            }
         }
     </script>
 </head>
