@@ -18,7 +18,7 @@
             text-align: center;
         }
         .button-container button {
-            margin: 0 10px;
+            margin: 0 5px;
             padding: 10px 20px;
             font-size: 14px; /* Change font size to 14px */
             font-family: Arial, sans-serif; /* Change font family to Arial */
@@ -41,6 +41,13 @@
             display: none;
             height: 100%;
         }
+        #error-message {
+            display: none;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 24px;
+            color: rgb(208, 18, 18);
+        }
     </style>
     <script>
         window.onload = function() {
@@ -51,8 +58,7 @@
                     if (userPassword === password.trim()) {
                         document.getElementById('main-content').style.display = 'block'; // Show the main content
                     } else {
-                        alert("Incorrect password!");
-                        window.location.href = "https://www.example.com"; // Redirect to another page
+                        document.getElementById('error-message').style.display = 'block'; // Show the error message
                     }
                 })
                 .catch(error => {
@@ -73,5 +79,6 @@
             allowfullscreen>
         </iframe>
     </div>>
+    <div id="error-message">Incorrect password! Please try again.</div>
 </body>
 </html>
