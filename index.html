@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Records</title>
+    <title>Input</title>
     <style>
         html, body {
             margin: 0;
@@ -20,8 +20,8 @@
         .button-container button {
             margin: 0 5px;
             padding: 10px 20px;
-            font-size: 14px; /* Change font size to 14px */
-            font-family: Arial, sans-serif; /* Change font family to Arial */
+            font-size: 14px;
+            font-family: Arial, sans-serif;
             color: #758389;
             background-color: #fff;
             border: 1px solid #A4CBE9;
@@ -34,7 +34,7 @@
         }
         iframe {
             width: 100%;
-            height: calc(100% - 50px); /* Adjust height to leave room for navigation */
+            height: calc(100% - 50px);
             border: none;
         }
         #main-content {
@@ -60,6 +60,12 @@
             }
         }
     </script>
+    <!-- Add to home screen for iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Money Tracking Dashboard">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div id="main-content">        
